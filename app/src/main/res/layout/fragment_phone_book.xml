@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    android:padding="@dimen/x20">
+
+    <LinearLayout
+        android:id="@+id/fl_search"
+        android:layout_width="match_parent"
+        android:layout_height="70px"
+        android:layout_marginTop="13px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginRight="@dimen/x14"
+            android:layout_weight="1"
+            android:background="@drawable/bg_paired_list">
+
+            <EditText
+                android:id="@+id/et_search"
+                android:layout_marginLeft="@dimen/x220"
+                style="@style/SearchEditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:drawableLeft="@drawable/ic_communication_addressbook_search"
+                android:drawablePadding="2px"
+                android:hint="@string/str_search_contact"
+                android:maxLength="8"
+                android:imeOptions="actionSearch"
+                android:singleLine="true"
+                android:textColor="@color/color_4dffffff"
+                android:textColorHint="@color/color_4dffffff"
+                android:textSize="24px" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_letter"
+        android:layout_width="match_parent"
+        android:layout_height="74px"
+        android:layout_marginTop="@dimen/x27"
+        android:gravity="center_vertical"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/iv_previous"
+            android:layout_width="57px"
+            android:layout_height="74px"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_addresslist_arrow_left_selector" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_letter"
+            android:layout_width="500px"
+            android:layout_height="53px"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/x2"
+            android:layout_marginRight="@dimen/x2"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="57px"
+            android:layout_height="74px"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_addresslist_arrow_right_selector" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/msg_white_list"
+        android:layout_width="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/x20">
+        <ImageView
+            android:layout_width="@dimen/x60"
+            android:layout_height="@dimen/x40"
+            android:paddingRight="@dimen/x20"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/x30"
+            android:src="@drawable/ic_wechat_information_messageremind"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#80ffffff"
+            android:textSize="@dimen/x24"
+            android:text="消息提醒"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x27">
+        <TextView
+            android:id="@+id/tv_empty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="161px"
+            android:text="未匹配到联系人"
+            android:textColor="@color/color_99ffffff"
+            android:textSize="24px"
+            android:visibility="gone" />
+        <LinearLayout
+            android:id="@+id/ll_friend_container"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rl_contact"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x550"
+                android:visibility="visible" />
+            <RelativeLayout
+                android:id="@+id/white_list_control"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/x32"
+                android:visibility="gone"
+                android:layout_height="@dimen/y125">
+                <TextView
+                    android:id="@+id/addwhite_list"
+                    android:layout_width="@dimen/x144"
+                    android:layout_height="@dimen/y54"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x120"
+                    android:background="@drawable/shape_button_turn_page_selected"
+                    android:gravity="center"
+                    android:text="添加提醒"
+                    android:textColor="@color/color_turn_page_selected"
+                    android:textSize="20px" />
+                <TextView
+                    android:id="@+id/cancel_addwhite_list"
+                    android:layout_width="@dimen/x144"
+                    android:layout_height="@dimen/y54"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/x120"
+                    android:layout_marginRight="@dimen/x114"
+                    android:background="@drawable/shape_button_turn_page_selected"
+                    android:gravity="center"
+                    android:text="取消"
+                    android:textColor="@color/color_turn_page_selected"
+                    android:textSize="20px" />
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="161px"
+            android:gravity="center"
+            android:padding="40px"
+            android:text="通讯录同步失败请重试"
+            android:textColor="@color/color_99ffffff"
+            android:textSize="24px"
+            android:visibility="gone" />
+        <LinearLayout
+            android:id="@+id/ll_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ProgressBar
+                android:layout_width="120px"
+                android:layout_height="120px"
+                android:indeterminateDrawable="@drawable/ic_progress_large" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="通讯录加载中..."
+                android:textColor="@color/color_ffffff"
+                android:textSize="@dimen/x24" />
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

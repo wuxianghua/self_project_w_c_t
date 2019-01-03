@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_base"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/userinfo_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="120px"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="120px"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <net.imoran.auto.morwechat.widget.TabItemView
+                    android:id="@+id/tiv_phone_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="140px"
+                    app:icon_select="@mipmap/ic_wechat_information_leftbar_information_focus"
+                    app:icon_un_select="@mipmap/ic_wechat_information_leftbar_information_normal"
+                    app:select="true"
+                    app:text="消息" />
+
+                <net.imoran.auto.morwechat.widget.TabItemView
+                    android:id="@+id/tiv_phone_book"
+                    android:layout_width="match_parent"
+                    android:layout_height="140px"
+                    app:icon_select="@mipmap/ic_wechat_information_leftbar_addbook_focus"
+                    app:icon_un_select="@mipmap/ic_wechat_information_leftbar_addbook_normal"
+                    app:select="false"
+                    app:text="通讯录" />
+
+                <net.imoran.auto.morwechat.widget.TabItemView
+                    android:id="@+id/tiv_phone_set"
+                    android:layout_width="match_parent"
+                    android:layout_height="140px"
+                    app:icon_select="@mipmap/ic_wechat_information_leftbar_set_focus"
+                    app:icon_un_select="@mipmap/ic_wechat_information_leftbar_set_normal"
+                    app:select="false"
+                    app:text="设置" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_sidebar_shadow" />
+        </FrameLayout>
+
+        <View
+            android:layout_width="4px"
+            android:layout_height="match_parent"
+            android:background="@color/color_0dffffff" />
+
+        <FrameLayout
+            android:id="@+id/fl_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </FrameLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/two_dimension_code"
+            android:layout_width="@dimen/x276"
+            android:layout_height="@dimen/x276"
+            android:onClick="reFresh"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            android:background="#ffffff"/>
+
+        <ProgressBar
+            android:id="@+id/login_progress"
+            android:layout_width="@dimen/x120"
+            android:layout_height="@dimen/x120"
+            android:indeterminateDrawable="@drawable/ic_progress_large"
+            android:layout_centerInParent="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_login_tip"
+            android:layout_below="@+id/login_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y8"
+            android:text="正在登录..."
+            android:layout_centerHorizontal="true"
+            android:visibility="gone"
+            android:textColor="@color/color_ffffff"
+            android:textSize="@dimen/x24" />
+
+        <ImageView
+            android:id="@+id/net_work_status"
+            android:layout_width="@dimen/x200"
+            android:layout_height="@dimen/x200"
+            android:src="@drawable/ic_status_networkdisconnection"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/net_work_notify"
+            android:layout_below="@+id/net_work_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x30"
+            android:text="网络连接已断开"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/x28"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/net_work_notify_set"
+            android:layout_below="@+id/net_work_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x84"
+            android:text="请检查网络设置"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/x24"
+            android:textColor="#99ffffff"/>
+
+        <TextView
+            android:id="@+id/tv_show_control_tip"
+            android:layout_below="@+id/two_dimension_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x36"
+            android:text="使用手机扫一扫进行车载微信的登录"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/x28"
+            android:visibility="invisible"
+            android:textColor="#ccffffff"/>
+    </RelativeLayout>
+</FrameLayout>

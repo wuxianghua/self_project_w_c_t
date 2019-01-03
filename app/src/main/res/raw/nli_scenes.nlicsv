@@ -1,0 +1,10 @@
+cmd,instructing,local_hotword,execute,com.xiaomo.bluetoothphone.ui.fragment.CallHistoryFragment,net.imoran.action.bluetooth
+cmd,instructing,local_hotword,execute,com.xiaomo.bluetoothphone.ui.fragment.DeviceListFragment,net.imoran.action.bluetooth
+cmd,instructing,local_hotword,execute,com.xiaomo.bluetoothphone.ui.fragment.PhoneBookFragment,net.imoran.action.bluetooth
+cmd,instructing,local_hotword,execute,com.xiaomo.bluetoothphone.ui.fragment.CallPhoneFragment,net.imoran.action.bluetooth
+cmd,instructing,reject,execute,com.xiaomo.bluetoothphone.ui.fragment.CallPhoneFragment,net.imoran.action.bluetooth
+phone,dialing,phone_contact,select,com.xiaomo.bluetoothphone.ui.fragment.PhoneBookFragment,net.imoran.action.bluetooth
+phone,dialing,phone_contact,inquire,com.xiaomo.bluetoothphone.ui.fragment.PhoneBookFragment,net.imoran.action.bluetooth
+phone,dialing,phone_contact,execute,com.xiaomo.bluetoothphone.ui.fragment.CallPhoneFragment,net.imoran.action.bluetooth
+phone,dialing,phone_contact,comfirm,com.xiaomo.bluetoothphone.ui.fragment.CallPhoneFragment,net.imoran.action.bluetooth
+cmd,instructing,update_contact_list,execute,com.xiaomo.bluetoothphone.ui.fragment.CallPhoneFragment,net.imoran.action.bluetooth

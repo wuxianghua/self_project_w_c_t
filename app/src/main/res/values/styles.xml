@@ -1,0 +1,40 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="EmptyActivityTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="SearchEditTextStyle">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColorHighlight">@color/color_4d135d91</item>
+        <item name="android:textCursorDrawable">@drawable/shape_input_cusor</item>
+        <item name="android:textSelectHandle">@drawable/ic_search_nonius</item>
+        <item name="android:textSelectHandleLeft">@drawable/ic_search_nonius</item>
+        <item name="android:textSelectHandleRight">@drawable/ic_search_nonius</item>
+    </style>
+
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="thumb" format="reference|color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="checkedColor" format="reference|color" />
+        <attr name="normalColor" format="reference|color" />
+        <attr name="textOn" format="string|integer" />
+        <attr name="textOff" format="string|integer" />
+    </declare-styleable>
+</resources>

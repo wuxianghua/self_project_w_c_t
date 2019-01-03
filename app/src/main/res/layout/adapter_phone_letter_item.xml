@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fl_container"
+    android:layout_width="35px"
+    android:layout_height="53px">
+
+    <TextView
+        android:id="@+id/tv_letter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="A"
+        android:textColor="@color/color_4dffffff"
+        android:textSize="24px" />
+</FrameLayout>

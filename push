@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+adb shell mount -o rw,remount /system
+adb push app/build/outputs/apk/debug/mor-wechat.apk /flysystem/app/

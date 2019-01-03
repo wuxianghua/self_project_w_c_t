@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/x89"
+    android:layout_height="@dimen/x138">
+    <ImageView
+        android:id="@+id/wechat_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_wechat_window_quickentry"/>
+    <TextView
+        android:id="@+id/num_msg_we"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/x30"
+        android:textSize="@dimen/x16"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:text="1"
+        android:background="@drawable/bg_wechat_tips"
+        android:layout_height="@dimen/x30" />
+</RelativeLayout>
